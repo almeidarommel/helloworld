@@ -19,7 +19,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jboss.quickstarts.eap</groupId>
     <artifactId>jboss-helloworld</artifactId>
-    <version>7.0.0.GA</version>
+    <version>7.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>JBoss EAP Quickstart: helloworld</name>
     <description>JBoss EAP Quickstart: Helloworld</description>
@@ -157,4 +157,21 @@
             </plugin>
         </plugins>
     </build>
+    <profiles>
+		<profile>
+			<id>nexus3</id>
+			<distributionManagement>
+				<repository>
+					<id>nexus3</id>
+					<name>Releases</name>
+					<url>http://nexus:8081/repository/maven-releases</url>
+				</repository>
+				<snapshotRepository>
+					<id>nexus3</id>
+					<name>Snapshot</name>
+					<url>http://nexus:8081/repository/maven-snapshots</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+    </profiles> 
 </project>
